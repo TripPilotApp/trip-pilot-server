@@ -29,6 +29,7 @@ const registerUser = async (req: Request, res: Response) => {
   }
 };
 
+// Authenticates the User - /api/login - POST
 const authenticateUser = async (req: Request, res: Response) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
@@ -45,6 +46,8 @@ const authenticateUser = async (req: Request, res: Response) => {
     res.status(401).json({ message: "User not found/password incorrect" });
   }
 };
+
+// LogsOut the User by clearing the cookie- /api/logout - POST
 const logoutUser = (req: Request, res: Response) => {
   clearToken(res);
   res.status(200).json({ message: "User logged Out" });

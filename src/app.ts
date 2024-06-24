@@ -20,6 +20,7 @@ app.use(cookieParser());
 
 app.use("/api/", api);
 
+// Handles the login,Signup and logout
 app.use(authRouter);
 
 app.use(notFound);
