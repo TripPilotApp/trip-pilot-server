@@ -1,8 +1,8 @@
-import app from './src/app';
+import app from "./src/app";
+import { connectToDB } from "./src/config/mongoose"; // Import the mongoose configuration file
 
-import { connectToDB } from './src/config/mongoose'; // Import the mongoose configuration file
-
-connectToDB()
+// Connects to the DB
+connectToDB();
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   /* eslint-disable no-console */
