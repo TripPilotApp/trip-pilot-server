@@ -25,3 +25,183 @@ models/: Contains MongoDB models.
 Services/: This are functions that communicate to our database
 
 utils/: Houses helper functions used throughout the application.
+
+### 
+
+# API Reference:
+
+### Introduction:
+
+Are you still using MSExcel to organize your trip information? What if there is an app feature that organizes all your travel info in one place? Then, you are all set to explore your dream destination with TripPilot. TripPilot is a cutting edge travel planning app that is designed to assist you in organizing, managing, and cooperating on tasks, and information when planning a trip.
+
+### Errors:
+
+TripPilot uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the range 2xx range indicate [success. Codes](http://success.Codes) in the 4xx range indicate an error that failed in the information provided(eg., a required parameter was omitted, e.t.c.). Codes in the range 5xx range indicate and error with TripPilot’s servers(these are rare).
+
+<aside>
+💡 **HTTP STATUS CODE SUMMARY**
+
+</aside>
+
+| 200 | OK | Everything worked as expected. |
+| --- | --- | --- |
+| 400 | Bad Request | The request was unacceptable, often due to missing a required parameter. |
+| 401 | Unauthorized | No valid API key provided. |
+| 402 | Request Failed | The parameters were valid but the request failed. |
+| 403 | Forbidden | The API key doesn’t have permissions to perform the request. |
+| 404 | Not Found | The requested resource doesn’t exist. |
+| 409 | Conflict | The request conflicts with another request (perhaps due to using the same idempotent key). |
+| 429 | Too Many Requests | Too many requests hit the API too quickly. We recommend an exponential backoff of your requests. |
+| 500, 502, 503, 504 | Server Errors | Something went wrong on TripPilot’s end. (These are rare.) |
+
+### SignUp:
+
+This object represents the successful registration of an User. Use it to register an user to the TripPilot App.
+
+```jsx
+Endpoint:
+
+POST /api/SignUp
+
+Parameters:
+name string
+User's name.It's displayed alongside the user 
+in the dashboard.
+
+email string
+User's email address.It's displayed alongside the
+user in the dashboard.Can be useful in searching
+and tracking.This may be upto 512 characters
+
+password string
+User's password.It's hashed along with the secret 
+and stored in the Database.Not visible to the user
+```
+
+### Returns:
+
+Returns the User Object after successful user creation. Raises an error if create parameters are invalid.(for example: Already existing email Id)
+
+```jsx
+**Response:
+{
+  "_id": {
+    "$oid": "6695ac2cf9cdd013476048ef"
+  },
+  "name": "Qwerty",
+  "email": "qwerty@gmail.com",
+ }**
+```
+
+## Login:
+
+This object represents the successful authentication of an existing user. Returns the user object if successful and HTTP error code if unsuccessful
+
+```jsx
+Endpoint:
+
+POST /api/Login
+
+Parameters:
+email string
+User's email address.It's displayed alongside the
+user in the dashboard.Can be useful in searching
+and tracking.This may be upto 512 characters
+
+password string
+User's password.It's hashed along with the secret 
+and stored in the Database.Not visible to the user
+```
+
+### Returns:
+
+Returns the User Object after user Log In. Raises an error if Login is unsuccessful(for example: Incorrect email Id or Password)
+
+```jsx
+**Response:
+{
+  "_id": {
+    "$oid": "6695ac2cf9cdd013476048ef"
+  },
+  "name": "Qwerty",
+  "email": "qwerty@gmail.com",
+ }**
+```
+
+## Customer Trips:
+
+This is an object representing the your [trips. You](http://trips.You) can retrieve it to see the trips in your current TripPilot account.
+
+<aside>
+💡 ENDPOINTS
+
+</aside>
+
+```jsx
+GET /api/:userId/trips
+POST /api/:userId/trips
+DELETE /api/:userId/trips
+```
+
+### Trip Object:
+
+Attributes
+
+id *string*
+
+Unique identifier for the object
+
+---
+
+name *string*
+
+Name of the location of the user’s trip location
+
+---
+
+location object
+
+Location is also known as geographic information or [geospatial data](https://www.tableau.com/data-insights/reference-library/visual-analytics/geospatial), location data refers to information related to objects or elements present in a geographic space or horizon. 
+
+User’s location.
+
+Type string
+
+**Vector:** This form uses points, lines, and polygons to represent features such as cities, roads, mountains, and bodies of water that are mapped and stored in geographic information systems (GIS).
+
+co ordinates number
+
+Latitude and Longitude Value of a location
+
+---
+
+start date number
+
+start date of the trip
+
+---
+
+End date number
+
+End date of the trip
+
+---
+
+Point of Interests -  Array of strings
+
+The places the user wants to visit
+
+---
+
+Packing Lists - Array of Objects
+
+The lists of items to be packed by the group of users planning to go to the trip.
+
+1. id string
+    1. Unique identifier of the packing list
+2. User_id string
+    1. Id of the User assigned to an item.
+3. Items - Array of objects
+    1. id - string Unique Identifier of an item
+    2. item - string Name of the item
+    3. Packed - Boolean True or False if the item is packed or not
