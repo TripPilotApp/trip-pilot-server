@@ -177,6 +177,89 @@ The lists of items to be packed by the group of users planning to go to the trip
     1. id - string Unique Identifier of an item
     2. item - string Name of the item
     3. Packed - Boolean True or False if the item is packed or not
+  
+### Get trips : GET /api/:userId/trips
+
+Returns the trips associated with the user by querying with their User ID.
+
+Returns an array of trips, a single trip object or an empty object.
+
+```jsx
+**Response:
+{
+  "name": "French Beach Camping",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -48.395,
+      123.9431
+    ]
+  },
+  "start_date": "Wed May 04 2022 12:00:53 GMT+0000 (UTC)",
+  "end_date": "Fr May 06 2022 12:00:53 GMT+0000 (UTC)",
+  "poi": [
+    {}
+  ],
+  "packing_lists": [
+    {
+      "_id": "001",
+      "user_id": "123",
+      "items": [
+        {
+          "_id": "010",
+          "item": "Coleman Stove",
+          "packed": "false"
+        }
+      ]
+    }
+  ]
+}**
+```
+
+### Post Trips : POST /api/:userId/trips
+
+Returns the posted trip object on successful posting of the trip.
+
+Returns an error if trying to post object without the mandatory fields
+
+```jsx
+**Response:
+{
+  "name": "Juan de Fuca Trail Hiking",
+  "location": {
+    "type": "Strait",
+    "coordinates": [
+    48.13, 123.33
+    ]
+  },
+  "start_date": "Wed May 04 2022 12:00:53 GMT+0000 (UTC)",
+  "end_date": "Fr May 06 2022 12:00:53 GMT+0000 (UTC)",
+  "poi": [
+    {}
+  ],
+  "packing_lists": [
+    {
+      "_id": "001",
+      "user_id": "456",
+      "items": [
+        {
+          "_id": "010",
+          "item": "Brush",
+          "packed": "false"
+        }
+      ]
+    }
+  ]
+}**
+```
+
+### Delete Trip: DELETE /api/:userId/trips
+
+Delete the list of upcoming trips. Returns the array of trip objects that are deleted
+
+Parameters:
+
+No parameters
 
 # trip-pilot
 In the project directory run: npm i
