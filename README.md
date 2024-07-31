@@ -322,7 +322,78 @@ GET /api/trips/:id
 PUT /api/trips/:id
 DELETE /api/trips/:id
 ```
+### Get trip by Id:
 
+Retrieves the details of trip based on the trip ID.
+
+**Parameters**
+
+---
+
+No Parameters
+
+**Returns**
+
+---
+
+Returns a trip Object if the call succeeds. If the tripID does not exist, this call throws an error
+
+```jsx
+RESPONSE:
+
+{
+  "name": "French Beach Camping",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -48.395,
+      123.9431
+    ]
+  },
+  "start_date": "Wed May 04 2022 12:00:53 GMT+0000 (UTC)",
+  "end_date": "Fr May 06 2022 12:00:53 GMT+0000 (UTC)",
+  "poi": [
+    {}
+  ],
+  "packing_lists": [
+    {
+      "_id": "001",
+      "user_id": "123",
+      "items": [
+        {
+          "_id": "010",
+          "item": "Coleman Stove",
+          "packed": "false"
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Update a trip:
+
+Updates/edits a trip by setting the values of the parameters passed. Any parameters not provided are left unchanged.
+
+**Parameters**
+
+---
+
+**Name** string
+
+**Location string**
+
+**Start_date**
+
+**end_date**
+
+**Packing_lists**
+
+**Returns**
+
+---
+
+Returns the trip object if the call succeeds. If the trip does not exist or another issue occurs, this call throws an error.
 # trip-pilot
 In the project directory run: npm i
 
