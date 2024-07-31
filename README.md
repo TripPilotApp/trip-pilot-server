@@ -274,6 +274,21 @@ No parameters
 }
 ```
 
+## Customer Trip By Id:
+
+Returns a trip Object based on the trip Id of the customer Id. You can retrieve it to see trip details.
+
+<aside>
+💡 ENDPOINTS
+
+</aside>
+
+```jsx
+GET /api/trips/:id
+PUT /api/trips/:id
+DELETE /api/trips/:id
+```
+
 # trip-pilot
 In the project directory run: npm i
 
