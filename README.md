@@ -260,7 +260,7 @@ Delete the list of upcoming trips. Returns the array of trip objects that are de
 Parameters:
 
 No parameters
-Response:
+```Response:
 {
 	[
 	"id":"ABC",
@@ -271,7 +271,7 @@ Response:
   "id": "bcd",
   "name": "French Beach Camping"],
   
-}
+}```
 
 # trip-pilot
 In the project directory run: npm i
