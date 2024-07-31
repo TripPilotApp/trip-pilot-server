@@ -260,6 +260,18 @@ Delete the list of upcoming trips. Returns the array of trip objects that are de
 Parameters:
 
 No parameters
+Response:
+{
+	[
+	"id":"ABC",
+	"name": "Juan de Fuca Trail Hiking"
+	]
+  ,
+  [
+  "id": "bcd",
+  "name": "French Beach Camping"],
+  
+}
 
 # trip-pilot
 In the project directory run: npm i
