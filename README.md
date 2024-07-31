@@ -271,7 +271,8 @@ No parameters
   "id": "bcd",
   "name": "French Beach Camping"],
   
-}```
+}
+```
 
 # trip-pilot
 In the project directory run: npm i
