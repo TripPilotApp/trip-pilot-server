@@ -100,7 +100,7 @@ Returns the User Object after user Log In. Raises an error if Login is unsuccess
  }**
 ```
 
-## Customer Trips:
+## User Trips:
 
 This is an object representing the your [trips. You](http://trips.You) can retrieve it to see the trips in your current TripPilot account.
 
@@ -308,9 +308,9 @@ No parameters
 }
 ```
 
-## Customer Trip By Id:
+## User Trip By Id:
 
-Returns a trip Object based on the trip Id of the customer Id. You can retrieve it to see trip details.
+Returns a trip Object based on the trip Id of the user Id. You can retrieve it to see trip details.
 
 <aside>
 💡 ENDPOINTS
