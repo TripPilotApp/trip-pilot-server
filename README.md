@@ -381,19 +381,52 @@ Updates/edits a trip by setting the values of the parameters passed. Any paramet
 
 **Name** string
 
+Name of the location of the user’s trip location
+
 **Location string**
+
+Type string
+
+**Vector:** This form uses points, lines, and polygons to represent features such as cities, roads, mountains, and bodies of water that are mapped and stored in geographic information systems (GIS).
+
+co ordinates number
+
+Latitude and Longitude Value of a location
 
 **Start_date**
 
+start date of the trip
+
 **end_date**
 
-**Packing_lists**
+End date of the trip
 
 **Returns**
 
 ---
 
 Returns the trip object if the call succeeds. If the trip does not exist or another issue occurs, this call throws an error.
+
+<aside>
+💡 Response
+
+</aside>
+
+```jsx
+
+{
+  "name": "French Beach Camping",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -48.395,
+      123.9431
+    ]
+  },
+  "start_date": "Wed May 04 2022 12:00:53 GMT+0000 (UTC)",
+  "end_date": "Fr May 06 2022 12:00:53 GMT+0000 (UTC)",
+ }
+```
 # trip-pilot
 In the project directory run: npm i
 
