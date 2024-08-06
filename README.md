@@ -702,6 +702,64 @@ DELETE /api/:id/packinglist
           "packed": "false"
         },
 ```
+## Edits an existing item:
+
+Updates an existing item by Id.
+
+**Parameters**
+
+Item value that needs to be updated.
+
+---
+
+1. User_id
+2. Item
+3. packed
+
+**Returns**
+
+---
+
+Returns a packing list object
+
+```jsx
+PUT /api/:id/packinglist
+"packing_lists": [
+    {
+      "_id": "001",
+      "user_id": "123",
+      "items": [
+        {
+          "_id": "010",
+          "item": "Lilleman Stove",
+          "packed": "false"
+        },
+        {
+          "_id": "011",
+          "item": "Butane Cylinder",
+          "packed": "false"
+        }        
+      ]
+    },
+    {
+      "_id": "002",
+      "user_id": "456",
+      "items": [
+        {
+          "_id": "111",
+          "item": "Lantern",
+          "packed": "true"
+        },
+        {
+          "_id": "112",
+          "item": "Mosquito Spray",
+          "packed": "false"
+        }        
+      ]
+    }
+  ]
+
+```
 # trip-pilot
 In the project directory run: npm i
 
