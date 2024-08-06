@@ -518,6 +518,61 @@ Returns the list of past trips based on the start time of the trip.
   
 }
 ```
+## Packing Lists:
+
+This is an array of object representing your trip’s packing list. You can retrieve it to see the packing lists associated with your [trip.](http://trip.It) It includes the packing list for all users on the current trip.
+
+<aside>
+💡 **ENDPOINTS**
+
+</aside>
+
+```jsx
+GET /api/:id/packinglist
+POST /api/:id/packinglist
+DELETE /api/:id/packinglist
+PUT /api/:id/packinglist
+```
+
+## The Packing List Object
+
+Attributes
+
+---
+
+**_id** string
+
+---
+
+ID of the packing list object
+
+**User_id** string
+
+---
+
+ID of the user assigned to the packing list
+
+**Items** array of objects
+
+---
+
+List of items for the given packing list
+
+**_id** string
+
+ID of the specific item in the array of packing lists
+
+**item** string
+
+---
+
+Name of the item associated with the packing list
+
+**packed** boolean
+
+---
+
+Boolean value which corresponds to true when the item is packed and false when the item is not packed.
 # trip-pilot
 In the project directory run: npm i
 
