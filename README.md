@@ -479,6 +479,45 @@ Returns the deleted trip object
   ]
 }
 ```
+### Get past trips:
+
+Retrieves the past trips of the user.
+
+**Parameters**
+
+---
+
+No parameters
+
+**Response**
+
+---
+
+Returns the list of past trips based on the start time of the trip.
+
+<aside>
+💡 RESPONSE
+
+</aside>
+
+```jsx
+{
+  "name": "French Beach Camping",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -48.395,
+      123.9431
+    ]
+  },
+  "start_date": "Wed May 04 2020 12:00:53 GMT+0000 (UTC)",
+  "end_date": "Fr May 06 2020 12:00:53 GMT+0000 (UTC)",
+  "poi": [
+    {}
+  ],
+  
+}
+```
 # trip-pilot
 In the project directory run: npm i
 
