@@ -676,6 +676,32 @@ Response
     }
   
 ```
+## Deletes an existing item:
+
+Deletes an existing item or packed item id object.
+
+**Parameters**
+
+---
+
+No Parameters
+
+**Returns**
+
+---
+
+Returns the deleted object
+ 
+
+```jsx
+DELETE /api/:id/packinglist
+				
+	{
+          "_id": "010",
+          "item": "Coleman Stove",
+          "packed": "false"
+        },
+```
 # trip-pilot
 In the project directory run: npm i
 
