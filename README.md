@@ -632,6 +632,50 @@ Response
     }
   ]
 ```
+
+## Post a new packing item:
+
+Posts a new packing item by passing the values of the parameters. Any parameters not provided will be left unchanged.
+
+**Parameters**
+
+---
+
+1. User_id
+2. Item
+3. packed
+
+**Response**
+
+---
+
+Returns the packing list item object if the update succeeded. This call will throw an error if update parameters are invalid.
+
+```jsx
+ENDPOINT:
+POST /api/:id/packinglist
+```
+
+```jsx
+Response
+    {
+      "_id": "001",
+      "user_id": "123",
+      "items": [
+        {
+          "_id": "010",
+          "item": "Coleman Stove",
+          "packed": "false"
+        },
+        {
+          "_id": "011",
+          "item": "Propane Cylinder",
+          "packed": "false"
+        }        
+      ]
+    }
+  
+```
 # trip-pilot
 In the project directory run: npm i
 
