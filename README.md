@@ -573,6 +573,65 @@ Name of the item associated with the packing list
 ---
 
 Boolean value which corresponds to true when the item is packed and false when the item is not packed.
+
+## Get Packing lists:
+
+Retrieves the list of items for the given trip.
+
+**Parameters:**
+
+---
+
+No parameters
+
+**Returns:**
+
+---
+
+Returns the list of packing items if a valid Trip ID was provided. Throws an error otherwise.
+
+```jsx
+ENDPOINT:
+GET /api/:id/packinglist
+```
+
+```jsx
+Response
+"packing_lists": [
+    {
+      "_id": "001",
+      "user_id": "123",
+      "items": [
+        {
+          "_id": "010",
+          "item": "Coleman Stove",
+          "packed": "false"
+        },
+        {
+          "_id": "011",
+          "item": "Propane Cylinder",
+          "packed": "false"
+        }        
+      ]
+    },
+    {
+      "_id": "002",
+      "user_id": "456",
+      "items": [
+        {
+          "_id": "111",
+          "item": "Tent",
+          "packed": "true"
+        },
+        {
+          "_id": "112",
+          "item": "Bed",
+          "packed": "false"
+        }        
+      ]
+    }
+  ]
+```
 # trip-pilot
 In the project directory run: npm i
 
