@@ -69,7 +69,7 @@ Are you still using MSExcel to organize your trip information? What if there is 
 
 ### Errors:
 
-TripPilot uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the range 2xx range indicate [success. Codes](http://success.Codes) in the 4xx range indicate an error that failed in the information provided(eg., a required parameter was omitted, e.t.c.). Codes in the range 5xx range indicate and error with TripPilot’s servers(these are rare).
+TripPilot uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the range 2xx range indicate success. Codes in the 4xx range indicate an error that failed in the information provided(eg., a required parameter was omitted, e.t.c.). Codes in the range 5xx range indicate and error with TripPilot’s servers(these are rare).
 
 <aside>
 💡 **HTTP STATUS CODE SUMMARY**
@@ -163,7 +163,7 @@ Returns the User Object after user Log In. Raises an error if Login is unsuccess
 
 ## User Trips:
 
-This is an object representing the your [trips. You](http://trips.You) can retrieve it to see the trips in your current TripPilot account.
+This is an object representing the your trips. You can retrieve it to see the trips in your current TripPilot account.
 
 <aside>
 💡 ENDPOINTS
@@ -581,7 +581,7 @@ Returns the list of past trips based on the start time of the trip.
 ```
 ## Packing Lists:
 
-This is an array of object representing your trip’s packing list. You can retrieve it to see the packing lists associated with your [trip.](http://trip.It) It includes the packing list for all users on the current trip.
+This is an array of object representing your trip’s packing list. You can retrieve it to see the packing lists associated with your trip. It includes the packing list for all users on the current trip.
 
 <aside>
 💡 **ENDPOINTS**
