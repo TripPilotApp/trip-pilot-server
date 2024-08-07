@@ -1,3 +1,36 @@
+# User Guide:
+
+### How to connect to database
+
+Mongo DB is connected to the backend using Mongoose. Mongoose is an ODM (Object Data Modeling) library for MongoDB.With Mongoose, developers must define a Schema and Model.
+
+Prerequisites:
+
+1. Minimal knowledge of Javascript and MongoDB
+
+Steps:
+
+1. Install NodeJS
+2. Install Mongoose
+
+```jsx
+npm i mongoose
+```
+
+**Create a Free MongoDB Atlas Cluster and Load the Sample Data**
+
+Next, you'll need a MongoDB database. The easiest way to get started with MongoDB is to use Atlas, MongoDB's fully-managed database-as-a-service.
+
+1. [**Head over to Atlas**](https://www.mongodb.com/cloud/atlas) and create a new cluster in the free tier. At a high level, a cluster is a set of nodes where copies of your database will be stored. Once your tier is created, [**load the sample data**](https://docs.atlas.mongodb.com/sample-data/).
+2. Use MongoDB Compass that is used to better visualize your data.
+
+The final step is to prep your cluster for connection.
+
+1. In [**Atlas](https://www.mongodb.com/cloud/atlas)/MongoDB compass**, navigate to your cluster and click **CONNECT**. The Cluster Connection Wizard will appear.
+2. The Wizard will prompt you to add your current IP address to the IP Access List and create a MongoDB user if you haven't already done so. Be sure to note the username and password you use for the new MongoDB user as you'll need them in a later step.
+3. Next, the Wizard will prompt you to choose a connection method. Select **Connect Your Application**. When the Wizard prompts you to select your driver version, select **Node.js** and **3.6 or later**. Copy the provided connection string.
+
+For more details on how to access the Connection Wizard and complete the steps described above, see the [**official documentation**](https://docs.atlas.mongodb.com/connect-to-cluster/).
 ### 
 
 # API Reference:
