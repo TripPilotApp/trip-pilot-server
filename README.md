@@ -31,6 +31,34 @@ The final step is to prep your cluster for connection.
 3. Next, the Wizard will prompt you to choose a connection method. Select **Connect Your Application**. When the Wizard prompts you to select your driver version, select **Node.js** and **3.6 or later**. Copy the provided connection string.
 
 For more details on how to access the Connection Wizard and complete the steps described above, see the [**official documentation**](https://docs.atlas.mongodb.com/connect-to-cluster/).
+
+# trip-pilot
+In the project directory run: npm i
+
+To start the server : npm run dev
+
+A brief desc of the folder for dev purpose
+public/: This directory stores static files such as images, CSS, and JavaScript files.
+
+src/: This directory contains all the source code for the application.
+
+api/: Contains API endpoints or routes and their respective controllers.
+
+config/: Houses configuration files such as Multer, MongoDB connection, cloudinary configuration, etc.
+
+controllers/: Contains feature-specific controllers.
+
+errors/: Contains error handling middleware.
+
+interface/: Stores Typescript interfaces for MongoDB models
+
+middleware/: Houses middleware functions such as JWT authentication.
+
+models/: Contains MongoDB models.
+
+Services/: This are functions that communicate to our database
+
+utils/: Houses helper functions used throughout the application.
 ### 
 
 # API Reference:
@@ -793,31 +821,3 @@ PUT /api/:id/packinglist
   ]
 
 ```
-# trip-pilot
-In the project directory run: npm i
-
-To start the server : npm run dev
-
-A brief desc of the folder for dev purpose
-public/: This directory stores static files such as images, CSS, and JavaScript files.
-
-src/: This directory contains all the source code for the application.
-
-api/: Contains API endpoints or routes and their respective controllers.
-
-config/: Houses configuration files such as Multer, MongoDB connection, cloudinary configuration, etc.
-
-controllers/: Contains feature-specific controllers.
-
-errors/: Contains error handling middleware.
-
-interface/: Stores Typescript interfaces for MongoDB models
-
-middleware/: Houses middleware functions such as JWT authentication.
-
-models/: Contains MongoDB models.
-
-Services/: This are functions that communicate to our database
-
-utils/: Houses helper functions used throughout the application.
-
