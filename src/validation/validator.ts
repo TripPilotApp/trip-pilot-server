@@ -12,4 +12,16 @@ const loginSchema = z.object({
   rememberMe: z.boolean().optional(),
 });
 
-export { userSchema, loginSchema };
+const tripSchema = z.object({
+  name: z.string().min(1, { message: "Name is required" }),
+  location: z.number().array(),
+  users:z.string().array(),
+  start_date:z.string().transform(x => new Date(x)),
+  end_date:z.string().transform(x => new Date(x)), 
+  // poi:z.number().array(),
+  packing_lists:z.string().array(),
+  budgets: z.string().array(),
+});git c
+
+
+export { userSchema, loginSchema, tripSchema };

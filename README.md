@@ -25,3 +25,5 @@ models/: Contains MongoDB models.
 Services/: This are functions that communicate to our database
 
 utils/: Houses helper functions used throughout the application.
+http://localhost:5000/api/trip
+http://localhost:5000/api/trip
