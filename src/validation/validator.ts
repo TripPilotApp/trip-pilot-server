@@ -21,7 +21,7 @@ const tripSchema = z.object({
   // poi:z.number().array(),
   packing_lists:z.string().array(),
   budgets: z.string().array(),
-});git c
+});
 
 
 export { userSchema, loginSchema, tripSchema };
